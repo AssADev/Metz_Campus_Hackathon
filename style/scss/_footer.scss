@@ -1,0 +1,114 @@
+footer {
+    background: linear-gradient(#080a40, #0b3080);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 0 60px 80px;
+
+    .adresse_acces {
+        position: relative;
+
+        .adresse {
+            h2 {
+                color: $primary-font-color;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+            p {
+                color: $tertiary-grid-color;
+                font-size: 18px;
+            }
+        }
+        .acces {
+            h2 {
+                color: $primary-font-color;
+                font-weight: 500;
+                margin: 25px 0 0;
+            }
+            .acces_links {
+                display: flex;
+                flex-direction: column;
+
+                & > a, & > p {
+                    padding: 5px 0;
+                    font-size: 18px;
+                    color: $tertiary-grid-color;
+                }
+                a {
+                    transition: 0.3s;
+                    cursor: pointer;
+                    &:hover {
+                        color: $primary-font-color;
+                    }
+                }
+            }
+        }
+    }
+    .reseaux_infos {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .reseaux {
+            margin-bottom: 10px;
+
+            a {
+                color: $tertiary-grid-color;
+                font-size: 34px;
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover {
+                    color: $primary-font-color;
+                }
+                &:first-child {
+                    margin-right: 10px;
+                }
+            }
+        }
+        p {
+            display: flex;
+            align-items: center;
+            color: $primary-font-color;
+            font-size: 18px;
+
+            i {
+                font-size: 26px;
+                margin-right: 10px;
+            }
+            &.hackathon {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.svg_footer {
+    box-shadow: 0 5px 0 $primary-color;
+}
+
+// Responsive : 
+@media screen and (max-width: 1150px) {
+    footer {
+        @include flexMidColumn;
+        text-align: center;
+    }
+    footer .adresse_acces {
+        margin: 25px 0;
+    }
+    footer .reseaux_infos p {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    footer {
+        padding: 0 25px 80px;
+    }
+    footer .adresse_acces p, footer .adresse_acces a {
+        font-size: 16px !important;
+    }
+    footer .reseaux_infos p {
+        font-size: 16px;
+    }
+}

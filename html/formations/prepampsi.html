@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metz Campus - Prépa MPSI</title>
+    <link rel="stylesheet" href="../../style/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!--Nav Bar-->
+    <nav>
+        <a href="../index.html" class="metz_campus"><p>Metz <span>Campus</span></p></a>
+        <div class="links">
+            <ul>
+                <li><a id="link" href="../index.html">Accueil</a></li>
+                <li>
+                    <a class="active" id="link">Formations</a>
+                    <i class='bx bx-chevron-up'></i>
+                    <ul>
+                        <li><a href="prepaecg.html">Prépa ECG</a></li>
+                        <li><a href="euclea.html">EUCLÉA</a></li>
+                        <li><a href="prepampsi.html">Prépa MPSI</a></li>
+                        <li><a href="prepaadimaker.html">Prépa ADIMAKER</a></li>
+                        <li><a href="estiam.html">ESTIAM</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="link">Visite</a>
+                    <i class='bx bx-chevron-up'></i>
+                    <ul>
+                        <li><a href="https://hackathon.lamas.ga/360/" target="_blank">Visite 360</a></li>
+                        <li><a href="https://matthieuduga.me/estiam_3dvisite/" target="_blank">Visite 3D</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--Chatbox-->
+    <div class="chatbox">
+        <div class="chatbox_btn_toggle">
+            <i class='bx bx-message-alt' ></i>
+        </div>
+        <div class="chatbox_content">
+            <div class="chatbox_header">
+                <p>Metz Campus Tchat</p>
+                <div class="close">
+                    <i class='bx bx-x' ></i>
+                </div>
+            </div>
+            <div class="chatbox_body">
+                <div class="chatbox_msg">
+                </div>
+                <div class="chatbox_input">
+                    <input type="text" placeholder="Écrivez votre message..." maxlength="100" id="chatbox_input">
+                    <div class="send">
+                        <i class='bx bx-send' ></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="head_container">
+        <header>
+            <h1>Prépa MPSI</h1>
+            <h3>La prépa MPSI (Mathématique, physique, science de l’ingénieur) comporte des études parfaites si vous souhaitez devenir ingénieur et être spécialisé dans les sciences</h3>
+            <a href="#formation"><i class='bx bx-chevron-down' ></i></a>
+        </header>
+        <div id="particles-js"></div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0b3080" fill-opacity="1" d="M0,128L30,138.7C60,149,120,171,180,165.3C240,160,300,128,360,138.7C420,149,480,203,540,197.3C600,192,660,128,720,128C780,128,840,192,900,192C960,192,1020,128,1080,106.7C1140,85,1200,107,1260,112C1320,117,1380,107,1410,101.3L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
+    <section id="formation">
+        <!--Description-->
+        <div class="section_title">
+            <h1>Description</h1>
+            <h3>La prépa MPSI dure 2 années, durant laquelle l'étudiant apprendra à penser comme un ingénieur, à découvrir les sciences en profondeur, et à travailler en équipe</h3>
+        </div>
+        <ul class="grid_desc">
+            <li>
+                <h1>01</h1>
+                <div class="content">
+                    <h2>Parcours d'Ingénieur</h2>
+                    <p>La prépa MPSI reprèsente le choix parfait pour suivre un cycle d'Ingénieur, avec une spécialisation dans les sciences.</p>
+                </div>
+            </li>
+            <li>
+                <h1>02</h1>
+                <div class="content">
+                    <h2>Contrôle continu</h2>
+                    <p>L'étudiant n'aura aucun concours à passer à l'issue de ses 2 années, ainsi, aucun stress, l'étudiant pourra mobiliser toutes ses capacités pour progresser dans une ambiance sereine.</p>
+                </div>
+            </li>
+            <li>
+                <h1>03</h1>
+                <div class="content">
+                    <h2>Formation Sécurisée</h2>
+                    <p>L'étudiant pourra intégrer l'une de nos 4 écoles partenaires sans avoir à passer de concours, ainsi, il continuera dans sa carrière de futur ingénieur.</p>
+                </div>
+            </li>
+            <li class="li_btn">
+                <div class="link_formation">
+                    <div class="link_content">
+                        <a href="http://www.polesup.fr/prepa-mpsi.html" target="_blank">En découvrir plus</a>
+                    </div>
+                    <span></span>
+                </div>
+            </li>
+        </ul>
+        <!--Description END-->
+    </section>
+    <section>
+        <!--Matières-->
+        <div class="section_title">
+            <h1>Matières</h1>
+            <h3>Ces dernières sont un point essentiel pour se passionner au sein de notre établissement, ainsi, elles ont étaient poffinées pour vous permettre le meilleur pour votre carrière professionnelle, nous vous proposons alors les matières principales</h3>
+        </div>
+        <div class="grid_container" id="card">
+            <div class="card">
+                <div class="content">
+                    <div class="card_title">
+                        <h2>Scientifiques</h2>
+                    </div>
+                    <p>Les matières scientifiques sont les fondamentaux de la Prépa MPSI, pour poursuivre un cycle d'ingénieur, on y retrouve les Mathématiques, la Physique, de l'informatique et les Sciences Industrielles pour l'Ingénieur (SII).</p>
+                    <span></span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <div class="card_title">
+                        <h2>Humaine et Sociale</h2>
+                    </div>
+                    <p>Cette formation permettra aux étudiants de manier la langue française, avec 2 heures hebdomadaires, vous permettant de vous préparer à passer la certification Voltaire.</p>
+                    <span></span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <div class="card_title">
+                        <h2>Langues Vivantes</h2>
+                    </div>
+                    <p>L'anglais est enseignée en langue principale en Prépa MPSI, cependant, une seconde langue sera enseignée selon le choix de l'étudiant (Allemand, Espagnol ou Italien). Les étudiants travailleront dans les meilleures conditions avec un laboratoire numérique à leurs dispositions.</p>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!--Matières END-->
+        <!--Diplôme-->
+        <div class="section_title">
+            <h1>Diplôme</h1>
+            <h3>À la fin de votre cursus, vous serez préparer à passer vos futurs concours après avoir intégrer une nouvelle école d'ingénieur</h3>
+        </div>
+        <!--Diplôme END-->
+    </section>
+    <section id="partenaires">
+        <!--Partenaires-->
+        <div class="section_title">
+            <h1>Partenaires</h1>
+            <h3>Notre établissement est en partenariats avec d'autres établissements dans lesquels vous pourrez postuler à la fin de votre parcours au sein de notre prépa MPSI</h3>
+        </div>
+        <div class="container_partenaires">
+            <a href="https://www.isen-lille.fr/" target="_blank"><img src="../../img/mpsi_isenisen.png"></a>
+            <a href="https://www.hei.fr/" target="_blank"><img src="../../img/mpsi_isenhei.png"></a>
+            <a href="http://ecam-strasbourg.eu/" target="_blank"><img src="../../img/mpsi_ecam.png"></a>
+            <a href="https://www.isep.fr/" target="_blank"><img src="../../img/mpsi_isep.png"></a>
+        </div>
+        <!--Partenaires END-->
+    </section>
+    <!--Footer-->
+    <svg class="svg_footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260"><path fill="#080a40" fill-opacity="1" d="M0,160L30,154.7C60,149,120,139,180,128C240,117,300,107,360,101.3C420,96,480,96,540,112C600,128,660,160,720,170.7C780,181,840,171,900,165.3C960,160,1020,160,1080,176C1140,192,1200,224,1260,229.3C1320,235,1380,213,1410,202.7L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
+    <footer>
+    <div class="footer_title">
+        <h1>Metz <span>Campus</span></h1>
+        <h3>Votre carrière professionnelle démarre ici</h3>
+    </div>
+    <div class="adresse_acces">
+        <div class="adresse">
+            <h2>Adresse de l'établissement</h2>
+            <p>10 Rue Mgr Heintz - 57958 - Montigny-Lès-Metz</p>
+        </div>
+        <div class="acces">
+            <h2>Accès à l'établissement</h2>
+            <div class="acces_links">
+                <a href="https://lemet.fr" target="_blank">Depuis le centre-ville de Metz</a>
+                <a href="http://www.infotim57.fr/" target="_blank">Depuis l'extérieur de la ville</a>
+                <a href="https://www.ter.sncf.com/grand-est" target="_blank">Par le Train</a>
+                <p>Piste cyclable accessible</p>
+            </div>
+        </div>
+    </div>
+    <div class="reseaux_infos">
+        <div class="reseaux">
+            <a href="https://www.facebook.com/PoleSuperieurJeanXxiii/" target="_blank"><i class='bx bxl-facebook' ></i></a>
+            <a href="https://twitter.com/campusmetz" target="_blank"><i class='bx bxl-twitter'></i></a>
+        </div>
+        <p><i class='bx bx-envelope' ></i>infos@polesup.fr</p>
+        <p class="hackathon">Développé lors de l'Hackathon du 14 au 17 Décembre 2020, par les E1 et E2 de l'ESTIAM.</p>
+    </div>
+    </footer>
+    <!--JavaScript-->
+    <script src="../../js/tchatbox.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="text/javascript" src="../../js/app.js"></script>
+    <script type="text/javascript" src="../../js/particles.js"></script>
+</body>
+</html>

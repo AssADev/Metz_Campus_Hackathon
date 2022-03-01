@@ -1,0 +1,117 @@
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: transparent;
+    grid-gap: 50px;
+    padding: 120px;
+
+    .card {
+        @include shadow(0, 0, 8px);
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        &:hover .content span {
+            width: 2500px;
+            height: 2500px;
+        }
+
+        .content {
+            @include absoluteCenter;
+            width: 75%;
+            z-index: 5;
+            padding: 10px;
+        }
+        .card_title {
+            @include flexMid;
+            color: $primary-font-color;
+            margin-bottom: 20px;
+            
+            h2 {
+                position: relative;
+                z-index: 10;
+                text-align: center;
+                margin-right: 25px;
+                font-size: 28px;
+            }
+        }
+        p {
+            position: relative;
+            z-index: 10;
+            color: $primary-font-color;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        &:nth-child(1) {
+            background: linear-gradient(30deg, $primary-color, $secondary-color);
+            border-radius: 45% 55% 59% 41% / 40% 44% 56% 60%;
+        }
+        &:nth-child(2) {
+            background: linear-gradient(105deg, $secondary-color, $primary-color);
+            border-radius: 62% 38% 65% 35% / 46% 56% 44% 54%;
+        }
+        &:nth-child(3) {
+            background: linear-gradient(145deg, $primary-color, $secondary-color);
+            border-radius: 38% 62% 47% 53% / 35% 41% 59% 65%;
+        }
+
+        span {
+            position: absolute;
+            width: 0;
+            height: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            opacity: 0.5;
+            background: linear-gradient(15deg, $primary-grid-color, $secondary-color);
+            transition: 0.4s;
+        }
+    }
+}
+
+// Responsive :
+@media screen and (max-width: 1440px) {
+    .grid_container {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        padding: 80px;
+    }
+    .card:first-child {
+        grid-row: 1;
+        grid-column: 1 / span 2;
+    }
+}
+
+@media screen and (max-width: 955px) {
+    .grid_container {
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        padding: 80px;
+    }
+    .card:first-child {
+        grid-column: 1 / span 1;
+    }
+    .card:last-child {
+        grid-row: 3;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .grid_container {
+        padding: 20px;
+    }
+    .grid_container .card {
+        height: 475px;
+    }
+    .grid_container .card .content {
+        padding: 5px;
+        width: 80%;
+    }
+    .grid_container .card .content .card_title h2 {
+        font-size: 20px;
+    }
+    .grid_container .card .content p {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,107 @@
+section {
+    position: relative;
+    &#partenaires {
+        margin-top: 60px;
+    }
+}
+
+.grid_container_section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 60px;
+
+    .left {
+        grid-column: 1;
+    }
+    .right {
+        grid-column: 2;
+    }
+    ul {
+        margin-right: 25px;
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+
+        li {
+            display: flex;
+            margin-bottom: 36px;
+
+            i {
+                color: $tertiary-grid-color;
+                font-size: 46px;
+                margin-right: 20px;
+            }
+            .content {
+                h2 {
+                    font-size: 38px;
+
+                    a {
+                        color: $secondary-color;
+                        transition: 0.2s;
+                        &:hover {
+                            color: $tertiary-grid-color;
+                        }
+                    }
+                }
+                p {
+                    margin: 10px 0 0 5px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .right, .left {
+        @include flexMid;
+        img {
+            max-width: 85%;
+        }
+    }
+}
+
+// Formations :
+.formation_header {
+    background: linear-gradient(#080a40, #0b3080);
+}
+
+// Partenaires :
+.container_partenaires {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 60px;
+    @include flexAround;
+    flex-wrap: wrap;
+}
+
+// Responsive : 
+@media screen and (max-width: 1440px) {
+    .grid_container_section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid_container_section ul {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 60px;
+    }
+    .grid_container_section .right {
+        grid-column: 1;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .grid_container_section {
+        padding: 40px;
+    }
+    .grid_container_section ul {
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid_container_section ul li i {
+        font-size: 32px;
+    }
+    .grid_container_section ul li .content h2 {
+        font-size: 32px;
+    }
+    .grid_container_section ul li .content p {
+        font-size: 16px;
+    }
+}

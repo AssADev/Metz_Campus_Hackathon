@@ -1,0 +1,63 @@
+// Font Import :
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+// Setup style :
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    background: #F2F2F2;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img, i {
+    user-select: none;
+}
+
+ul {
+    list-style: none;
+}
+
+// Selection :
+::selection {
+    background:#080A40;
+    color: #F2F2F2;
+}
+
+// Scrollbar (Default) : 
+::-webkit-scrollbar {
+    background: #080A40;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #F2F2F2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1E87F4;
+}
+
+// Import :
+@import 'scss/_mixin.scss';
+@import 'scss/_variable.scss';
+
+@import 'scss/_navbar.scss';
+@import 'scss/_header.scss';
+@import 'scss/_footer.scss';
+@import 'scss/_section.scss';
+@import 'scss/_formation.scss';
+@import 'scss/_chatbox.scss';
+@import 'scss/_card.scss';
+@import 'scss/_title.scss';

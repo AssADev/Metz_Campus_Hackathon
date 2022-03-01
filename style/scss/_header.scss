@@ -1,0 +1,71 @@
+.head_container {
+    background: linear-gradient(#080a40, #0b3080);
+
+    #particles-js {
+        @include absoluteCenter;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+header {
+    position: relative;
+    @include flexMidColumn;
+    min-height: 100vh;
+    padding: 30px;
+    
+    h1 {
+        position: relative;
+        z-index: 5;
+        text-align: center;
+        color: $primary-font-color;
+        font-size: 86px;
+        margin-bottom: 20px;
+    }
+    h3 {
+        position: relative;
+        z-index: 5;
+        text-align: center;
+        max-width: 875px;
+        color: $primary-font-color;
+        font-weight: 400;
+        font-size: 26px;
+    }
+    a {
+        position: absolute;
+        bottom: 70px;
+        z-index: 2;
+        color: $primary-font-color;
+        font-size: 42px;
+        animation: scrollDown 3s infinite;
+    }
+}
+
+// Keyframes : 
+@keyframes scrollDown {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+}
+
+// Responsive :
+@media screen and (max-width: 600px) {
+    .head_container header h1 {
+        font-size: 56px;
+    }
+    .head_container header h3 {
+        font-size: 20px;
+    }
+}

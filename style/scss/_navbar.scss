@@ -1,0 +1,187 @@
+nav {
+    @include flexBetween;
+    position: fixed;
+    z-index: 50;
+    transform: translateY(-105%);
+    top: 0;
+    left: 0;
+    background-color: $tertiary-color;
+    padding-right: 10px;
+    height: 60px;
+    width: 100%;
+    transition: 0.4s;
+}
+
+nav.sticky {
+    @include shadow(0, 0, 15px);
+    transform: translateY(0);
+}
+
+.metz_campus {
+    &:hover {
+        span {
+            color: $primary-font-color;
+        }
+    }
+    p {
+        font-size: 24px;
+        font-weight: 600;
+        color: #FFF;
+        background: $primary-color;
+        padding: 16px 30px;
+
+        span {
+            color: $tertiary-grid-color;
+            transition: 0.4s;
+        }
+    }
+}
+.links {
+    ul {
+        @include flexMid;
+
+        li {
+            @include flexMid;
+            position: relative;
+            &:hover > ul {
+                top: 60px;
+                opacity: 1;
+                visibility: visible;
+            }
+            &:hover > a#link::before {
+                width: 100%;
+            }
+            &:hover > i {
+                transform: rotate(180deg);
+            }
+            &.mobile_on {
+                & > i {
+                    transform: rotate(180deg);
+                }
+                a#link::before {
+                    width: 100%;
+                }
+                & > ul {
+                    top: 60px;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            
+            a#link {
+                position: relative;
+                color: #222;
+                font-size: 24px;
+                font-weight: 500;
+                margin-left: 25px;
+                padding: 16px 0;
+                transition: 0.4s;
+                &:last-child {
+                    margin-right: 15px;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    width: 0%;
+                    height: 6px;
+                    background: $primary-color;
+                    transition: 0.4s;
+                }
+                &:hover {
+                    color: $secondary-color;
+    
+                    &::before {
+                        width: 100%;
+                    }
+                }
+    
+                &.active {
+                    color: $secondary-color;
+    
+                    &::before {
+                        width: 100%;
+                    }
+                }
+                &:hover + i {
+                    transform: rotate(180deg);
+                }
+            }
+            i {
+                margin-left: 5px;
+                color: $primary-color;
+                font-size: 32px;
+                transition: 0.4s;
+            }
+        }
+        ul {
+            @include flexMidColumn;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-53%);
+            top: 70px;
+            width: 200px;
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            background: $tertiary-color;
+            transition: 0.3s;
+
+            li {
+                position: relative;
+                width: 100%;
+                transition: 0.3s;
+                background: $primary-color;
+                border-bottom: 1px solid #FFF;
+                &:last-child {
+                    border-bottom: none;
+                }
+                &:hover {
+                    background: $secondary-color;
+                    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.4);
+                }
+                
+                a {
+                    color: $primary-font-color;
+                    font-size: 22px;
+                    font-weight: 500;
+                    padding: 15px;
+                    transition: 0.4s;
+                }
+            }
+        }
+    }
+}
+
+// Responsive : 
+@media screen and (max-width: 800px) {
+    nav {
+        @include flexMid;
+        padding-right: 0;
+    }
+    nav .metz_campus {
+        display: none;
+    }
+    nav .links ul li:hover > ul {
+        top: 58px;
+    }
+    nav .links ul ul {
+        transform: translateX(-57%);
+    }
+    nav .links ul li a#link {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    nav .links ul li a#link::before {
+        bottom: -2px;
+    }
+    nav .links ul li a {
+        font-size: 18px;
+    }
+    nav .links ul li i {
+        margin-left: 0;
+    }
+    nav .links ul li ul {
+        width: 140px;
+    }
+}

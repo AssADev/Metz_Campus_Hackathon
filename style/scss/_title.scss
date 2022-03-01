@@ -1,0 +1,127 @@
+// Main Title :
+.main_title {
+    @include flexMidColumn;
+
+    h1 {
+        text-align: center;
+        color: $primary-font-color;
+        font-size: 64px;
+        margin-bottom: 20px;
+    }
+    h3 {
+        text-align: center;
+        max-width: 800px;
+        color: $primary-font-color;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+}
+
+// Section Title :
+.section_title {
+    @include flexMidColumn;
+
+    h1 {
+        text-align: center;
+        color: $secondary-font-color;
+        font-size: 64px;
+        margin-bottom: 20px;
+    }
+    h3 {
+        text-align: center;
+        max-width: 800px;
+        color: $secondary-font-color;
+        font-weight: 400;
+        margin-bottom: 30px;
+        font-size: 22px;
+    }
+}
+
+// Examples :
+.visites {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .visite {
+        @include flexMidColumn;
+        margin: 40px;
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            
+            a {
+                color: $tertiary-grid-color;
+                font-size: 48px;
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover {
+                    color: $primary-grid-color;
+                }
+            }
+        }
+        h3 {
+            text-align: center;
+            color: $secondary-font-color;
+            font-weight: 400;
+            margin-bottom: 30px;
+            font-size: 20px;
+        }
+        a#visite_link {
+            @include shadow(0, 0, 10px);
+            text-align: center;
+            background: linear-gradient(0deg, $primary-color, $secondary-color);
+            color: $primary-font-color;
+            font-size: 18px;
+            padding: 20px 25px;
+            transition: 0.3s;
+            &:hover {
+                padding: 20px 40px
+            }
+        }
+    }
+}
+
+// Footer Title :
+.footer_title {
+    @include flexMidColumn;
+
+    h1 {
+        text-align: center;
+        color: $primary-font-color;
+        font-size: 36px;
+        margin-bottom: 20px;
+
+        span {
+            color: $tertiary-grid-color;
+        }
+    }
+    h3 {
+        text-align: center;
+        color: $primary-font-color;
+        font-weight: 400;
+    }
+}
+
+// Responsive :
+@media screen and (max-width: 1440px) {
+    .visites {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main_title h1, .section_title h1 {
+        font-size: 52px;
+    }
+    .main_title h3, .section_title h3 {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+    .visites .visite h1 a {
+        font-size: 38px;
+    }
+    .visites .visite h3 {
+        font-size: 18px;
+    }
+}
